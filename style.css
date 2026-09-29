@@ -88,3 +88,16 @@ button:hover {
     font-size: 14px;
     border-bottom: 1px solid #ddd;
 }
+.history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clear-history {
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px;
+}

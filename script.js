@@ -48,3 +48,6 @@ document.addEventListener("keydown", function(event) {
         clearDisplay();
     }
 });
+function clearHistory() {
+    document.getElementById("historyList").innerHTML = "";
+}
