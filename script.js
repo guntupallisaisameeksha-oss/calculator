@@ -11,10 +11,19 @@ function clearDisplay() {
 function deleteLast() {
     display.value = display.value.slice(0, -1);
 }
-
 function calculate() {
     try {
-        display.value = eval(display.value);
+        const expression = display.value;
+        const result = eval(expression);
+
+        display.value = result;
+
+        const historyList = document.getElementById("historyList");
+
+        const historyItem = document.createElement("div");
+        historyItem.textContent = expression + " = " + result;
+
+        historyList.prepend(historyItem);
     } catch {
         display.value = "Error";
     }
